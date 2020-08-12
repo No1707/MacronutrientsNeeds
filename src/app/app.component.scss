@@ -3,25 +3,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
 
 $primary: rgb(111, 0, 255);
-$heroText: rgb(0, 0, 0, .7);
 
+/* hero */
 header {
     width: 100%;
     height: 100vh;
     display: flex;
-    background-color: rgb(241, 240, 234);
+    background-color: white;
 
     .text{
         width: 40%;
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: center;
         height: 100%;
 
         h1{
             font-family: 'Poppins', sans-serif;
             font-size: 4vw;
-            color: #9ed65d;
+            color: $primary;
             text-align: center;
             text-transform: uppercase;
         }
@@ -34,6 +34,7 @@ header {
             span{
                 font-weight: bold;
                 font-size: 110%;
+                color: $primary;
             }
         }
     }
@@ -48,51 +49,3 @@ header {
     }
 
 }
-
-main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-
-    .inter{
-        width: 30%;
-        border: 1px solid black;
-    }
-
-    .container{
-        width: 90%;
-        display: flex;
-        align-items: center;
-        height: 40vh;
-
-        h3{
-            width: 60%;
-            font-family: 'Poppins', sans-serif;
-            font-size: 5.5vw;
-            text-align: center;
-            text-transform: uppercase;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-attachment: fixed;
-        }
-
-        p{
-            width: 40%;
-            font-size: 1.5em;
-        }
-
-    }
-    
-    .carbohydrates h3{
-        background-image: url(../assets/oats.jpg);
-    }
-    .fats h3{
-        background-image: url(../assets/Avocad0-CD.jpg);
-    }
-    .proteins h3{
-        background-image: url(../assets/chicken.jpg);
-    }
-    
-}
-
