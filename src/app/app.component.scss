@@ -4,7 +4,7 @@
 
 $primary: rgb(111, 0, 255);
 
-/* hero */
+/* hero - part 1 */
 header {
     width: 100%;
     height: 100vh;
@@ -48,4 +48,111 @@ header {
         background-size: cover;
     }
 
+}
+
+
+/* Definitions - part 2 */
+.definition{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+
+    .inter{
+        width: 30%;
+        border: 1px solid black;
+    }
+
+    .defContainer{
+        width: 90%;
+        display: flex;
+        align-items: center;
+        height: 35vh;
+
+        h3{
+            width: 60%;
+            font-family: 'Poppins', sans-serif;
+            font-size: 5.5vw;
+            text-align: center;
+            text-transform: uppercase;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-attachment: fixed;
+        }
+
+        p{
+            width: 40%;
+            font-size: 1.5em;
+        }
+
+    }
+    
+    .carbohydrates h3{
+        background-image: url(../assets/oats.jpg);
+    }
+    .fats h3{
+        background-image: url(../assets/Avocad0-CD.jpg);
+    }
+    .proteins h3{
+        background-image: url(../assets/baked-chicken-breast-3.jpg);
+    }
+    
+}
+
+/* Reveal */
+.revealRight{
+    transform: translateX(10vw);
+    opacity: 0;
+    transition: transform 1s cubic-bezier(0, 0, 0, 1), opacity 1s;
+    will-change: transform, opacity;
+}
+.revealLeft{
+    transform: translateX(-10vw);
+    opacity: 0;
+    transition: transform 1s cubic-bezier(0, 0, 0, 1), opacity 1s;
+    will-change: transform, opacity;
+}
+
+.revealRight.revealed{
+    transform: translateX(0vh);
+    opacity: 1;
+}
+.revealLeft.revealed{
+    transform: translateX(0vh);
+    opacity: 1;
+}
+
+
+/* tdee - part 3 */
+.tdee{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+
+    h1{
+        font-family: 'Poppins', sans-serif;
+        font-size: 4vw;
+        color: $primary;
+        text-align: center;
+    }
+
+    .tdeeContainer{ 
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 60vh;
+
+        p{
+            font-size: 1.5em;
+            width: 40%;
+        }
+
+        app-tdee{
+            width: 40%;
+            height: 100%;
+        }
+    }
 }
