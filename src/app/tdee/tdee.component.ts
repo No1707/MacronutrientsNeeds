@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
@@ -7,8 +7,6 @@ import { FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./tdee.component.scss']
 })
 export class TDEEComponent {
-
-  TDEE: number = 0
 
   allActivities = [
     { Id: 1, Name: "Base Metabolic Rate"},
@@ -32,13 +30,19 @@ export class TDEEComponent {
 
   constructor(private fb: FormBuilder) { }
 
+  result: number
+
+  @Output() change: EventEmitter<number> = new EventEmitter<number>()
+
   onSubmit(){
     const { Gender, Age, Height, Weight, Activity } = this.TDEEForm.value
 
     if( Gender === "man"){
-      this.TDEE = Math.round((10 * Weight + 6.25 * Height - 5 * Age + 5) * Activity)
+      this.result = Math.round((10 * Weight + 6.25 * Height - 5 * Age + 5) * Activity)
+      this.change.emit(this.result)
     } else {
-      this.TDEE = Math.round((10 * Weight + 6.25 * Height - 5 * Age - 161) * Activity)
+      this.result = Math.round((10 * Weight + 6.25 * Height - 5 * Age - 161) * Activity)
+      this.change.emit(this.result)
     }
   }
 

@@ -19,13 +19,16 @@ form{
             width: 15px;
             height: 15px;
         }
+        label{
+            font-size: 1.1em;
+        }
     }
 
     input[type=text], select{
         width: 80%;
         padding: 10px;
         outline: 0;
-        font-size: 1em;
+        font-size: 1.2em;
         background: rgba(255,255,255,.1);
         border: none;
         border-radius: 6px;
@@ -53,12 +56,4 @@ form{
     }
     
 
-}
-
-.result{
-    font-size: 2em;
-
-    span{
-        color: $primary;
-    }
 }

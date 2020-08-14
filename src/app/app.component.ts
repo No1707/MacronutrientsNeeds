@@ -6,7 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
   title = 'macrosNeeds';
+
+  calories: number
+
+  caloriesNeed(event){
+    this.calories = event
+  }
 
   ngOnInit(): void {
 

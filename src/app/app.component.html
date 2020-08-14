@@ -72,15 +72,18 @@
 
         <h2>First, we need to determine your <span>TDEE</span> <br>(Total Daily Energy Expenditure)</h2>
         <p>Your total daily energy expenditure is an estimation of how many calories you burn per day when exercise is taken
-        into account.</p>
-        <p>Determining your caloric budget (the number of calories you can consume) positions you to be more successful
-          with your fitness goals; knowing your caloric needs empowers you with the knowledge to employ a more practical and
-          sustainable strategy to achieving your fitness goals.</p>
+        into account. <br><br> Determining your caloric budget (the number of calories you can consume) positions you to be more successful
+        with your fitness goals; knowing your caloric needs empowers you with the knowledge to employ a more practical and
+        sustainable strategy to achieving your fitness goals.</p>
 
       </div>
 
-      <app-tdee></app-tdee>
-      
+      <div>
+        <app-tdee (change)="caloriesNeed($event)"></app-tdee>
+        
+        <p class="result" *ngIf="calories > 0">You approximately need <span>{{ calories }} calories/day.</span></p>
+      </div>
+
     </div>
 
   </section>

@@ -166,10 +166,22 @@ header {
             }
         }
 
-        app-tdee{
+        div:nth-child(2){
             padding-top: 5vh;
             width: 40%;
             height: 100%;
+
+            app-tdee{
+            width: 100%;
+        }
+
+            .result{
+                font-size: 2em;
+
+                span{
+                    color: $primary;
+                }
+            }
         }
     }
 }
