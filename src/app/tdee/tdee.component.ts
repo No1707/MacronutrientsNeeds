@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
@@ -7,6 +7,8 @@ import { FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./tdee.component.scss']
 })
 export class TDEEComponent {
+
+  TDEE: number = 0
 
   allActivities = [
     { Id: 1, Name: "Base Metabolic Rate"},
@@ -31,13 +33,12 @@ export class TDEEComponent {
   constructor(private fb: FormBuilder) { }
 
   onSubmit(){
-    // const val = 
     const { Gender, Age, Height, Weight, Activity } = this.TDEEForm.value
 
     if( Gender === "man"){
-      console.log(Math.round((10 * Weight + 6.25 * Height - 5 * Age + 5) * Activity))
+      this.TDEE = Math.round((10 * Weight + 6.25 * Height - 5 * Age + 5) * Activity)
     } else {
-      console.log(Math.round((10 * Weight + 6.25 * Height - 5 * Age - 161) * Activity))
+      this.TDEE = Math.round((10 * Weight + 6.25 * Height - 5 * Age - 161) * Activity)
     }
   }
 
