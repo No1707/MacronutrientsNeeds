@@ -9,7 +9,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 export class TDEEComponent {
 
   allActivities = [
-    { Id: 1, Name: "Base Metabolic Rate"},
+    { Id: 1, Name: "Basal Metabolic Rate (the minimum your body needs to function)"},
     { Id: 1.2, Name: "Rarely exercices"},
     { Id: 1.375, Name: "2-3 times/week"},
     { Id: 1.4187, Name: "4 times/week"},

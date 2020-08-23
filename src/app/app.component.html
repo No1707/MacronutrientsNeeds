@@ -71,16 +71,22 @@
       <div>
 
         <h2>First, we need to determine your <span>TDEE</span> <br>(Total Daily Energy Expenditure)</h2>
-        <p>Your total daily energy expenditure is an estimation of how many calories you burn per day when exercise is taken
-        into account. <br><br> Determining your caloric budget (the number of calories you can consume) positions you to be more successful
-        with your fitness goals; knowing your caloric needs empowers you with the knowledge to employ a more practical and
-        sustainable strategy to achieving your fitness goals.</p>
+
+        <p>Your total daily energy expenditure is an estimation of how many calories you burn per day when exercise is
+          taken
+          into account. <br><br> Determining your caloric budget (the number of calories you can consume) positions you
+          to be more successful
+          with your fitness goals; knowing your caloric needs empowers you with the knowledge to employ a more practical
+          and
+          sustainable strategy to achieving your fitness goals.</p>
+
+        <p>This calculation uses the <span>Mifflin - St Jeor</span> formula, which is the most used.</p>
 
       </div>
 
       <div>
         <app-tdee (change)="caloriesNeed($event)"></app-tdee>
-        
+
         <p class="result" *ngIf="calories > 0">You approximately need <span>{{ calories }} calories/day.</span></p>
       </div>
 
@@ -88,8 +94,24 @@
 
   </section>
 
-  <section>
-    <p>more details about TDEE</p>
+  <section class="tdeeDetails">
+
+    <p><span>Maintaining</span> your current body weight, will require roughly the TDEE you calculated above. To
+      <span>gain</span> weight, you should
+      exceed your TDEE and to <span>lose</span> weight you should create a caloric deficit by consuming less than your
+      TDEE. You can create
+      a caloric deficit by increasing your physical activity or consuming less than you TDEE. Please keep in mind that
+      too
+      large of a caloric deficit can lead to health issues or even compromise your weight-loss.</p>
+
+    <div *ngIf="calories > 0">
+
+        <button value="lose" (click)="loseOrGain($event)">Lose weight</button>
+        <p>{{ goal }}</p>
+        <button value="gain" (click)="loseOrGain($event)">Gain weight</button>
+
+    </div>
+
   </section>
 
 </main>

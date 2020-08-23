@@ -7,9 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  title = 'macrosNeeds';
+  // title = 'macrosNeeds';
 
   calories: number
+  goal
 
   caloriesNeed(event){
     this.calories = event
@@ -59,4 +60,14 @@ export class AppComponent {
 
     })
   }
+  // ngInit end
+
+  loseOrGain(event){
+    if (event.target.value === "lose"){
+      this.goal = (this.calories * 0.8).toFixed(1)
+    } else {
+      this.goal = (this.calories * 1.2).toFixed(1)
+    }
+  }
+
 }
