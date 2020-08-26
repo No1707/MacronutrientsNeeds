@@ -62,11 +62,20 @@ export class AppComponent {
   }
   // ngInit end
 
+  
+
   loseOrGain(event){
-    if (event.target.value === "lose"){
+    const active = document.querySelector(".activeButton")
+    const tar = event.target
+    if(active){
+      active.classList.remove("activeButton")
+    }
+    if (tar.value === "lose"){
       this.goal = (this.calories * 0.8).toFixed(1)
+      tar.classList.add("activeButton")
     } else {
       this.goal = (this.calories * 1.2).toFixed(1)
+      tar.classList.add("activeButton")
     }
   }
 

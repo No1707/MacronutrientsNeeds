@@ -27,24 +27,17 @@
 
     <div class="defContainer carbohydrates revealLeft">
       <h3>Carbohydrates</h3>
-      <p>These are a major source of energy for our bodies and are stored in our muscles and liver for later use.
-        Foods
-        that
-        contain large amounts of carbohydrates include fruits, grains (rice, oats, barley, etc) and roots (potatoes,
-        yams,
-        carrots, etc).</p>
+      <p>These are a major source of energy for our bodies and are stored in our muscles and liver for later use.Foods
+        that contain large amounts of carbohydrates include fruits, grains (rice, oats, barley, etc) and roots
+        (potatoes, yams, carrots, etc).</p>
     </div>
 
     <div class="inter"></div>
 
     <div class="defContainer proteins revealRight">
       <p>Our bodies use proteins to grow tissue and muscle, repair organs and to create hormones and enzymes; proteins
-        are
-        also
-        used for energy when carbohydrates are unavailable. Foods that contain high levels of protein include
-        poultry,
-        fish,
-        beans, diary, nuts and legumes.</p>
+        are also used for energy when carbohydrates are unavailable. Foods that contain high levels of protein include
+        poultry, fish, beans, diary, nuts and legumes.</p>
       <h3>Proteins</h3>
     </div>
 
@@ -53,9 +46,8 @@
     <div class="defContainer fats revealLeft">
       <h3>Fats</h3>
       <p>In order to absorb vitamins, our bodies need fats. Foods that contain a high percentage of fat include
-        cooking
-        oils,
-        butter, nuts and cheese. Of the three macronutrients, fats contain the highest number of calories per gram.
+        cooking oils, butter, nuts and cheese. Of the three macronutrients, fats contain the highest number of calories
+        per gram.
       </p>
     </div>
 
@@ -73,14 +65,12 @@
         <h2>First, we need to determine your <span>TDEE</span> <br>(Total Daily Energy Expenditure)</h2>
 
         <p>Your total daily energy expenditure is an estimation of how many calories you burn per day when exercise is
-          taken
-          into account. <br><br> Determining your caloric budget (the number of calories you can consume) positions you
-          to be more successful
+          taken into account. <br><br> Determining your caloric budget (the number of calories you can consume)
+          positions you to be more successful
           with your fitness goals; knowing your caloric needs empowers you with the knowledge to employ a more practical
-          and
-          sustainable strategy to achieving your fitness goals.</p>
+          and sustainable strategy to achieving your fitness goals.</p>
 
-        <p>This calculation uses the <span>Mifflin - St Jeor</span> formula, which is the most used.</p>
+        <p>This calculation uses the <a target="blank" href="https://sympa-sympa.com/creation-bien-etre/une-formule-simple-calcule-combien-de-calories-par-jour-tu-devrais-consommer-pour-perdre-du-poids-307360/"><span>Mifflin-St Jeor</span></a> formula, which is the most used and precise method.</p>
 
       </div>
 
@@ -99,16 +89,15 @@
     <p><span>Maintaining</span> your current body weight, will require roughly the TDEE you calculated above. To
       <span>gain</span> weight, you should
       exceed your TDEE and to <span>lose</span> weight you should create a caloric deficit by consuming less than your
-      TDEE. You can create
-      a caloric deficit by increasing your physical activity or consuming less than you TDEE. Please keep in mind that
-      too
-      large of a caloric deficit can lead to health issues or even compromise your weight-loss.</p>
+      TDEE. You can create a caloric deficit by increasing your physical activity or consuming less than you TDEE.
+      Please keep in mind that too large of a caloric deficit can lead to health issues or even compromise your
+      weight-loss.</p>
 
     <div *ngIf="calories > 0">
 
-        <button value="lose" (click)="loseOrGain($event)">Lose weight</button>
-        <p>{{ goal }}</p>
-        <button value="gain" (click)="loseOrGain($event)">Gain weight</button>
+      <button class="loseGain" value="lose" (click)="loseOrGain($event)">Lose</button>
+      <p>{{ goal }}</p>
+      <button class="loseGain" value="gain" (click)="loseOrGain($event)">Gain</button>
 
     </div>
 

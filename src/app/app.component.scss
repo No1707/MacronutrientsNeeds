@@ -207,6 +207,8 @@ header {
 
         span{
             font-weight: bold;
+            color: $primary;
+            text-transform: uppercase;
         }
     }
 
@@ -215,11 +217,18 @@ header {
         display: flex;
         justify-content: space-between;
 
+        .activeButton{
+            background-color: $primary;
+            color: #e8eeef;
+        }
+
         button{
             transition: 0.2s;
             cursor: pointer;
             font-family: "Nunito", "sans-serif";
             font-size: 1em;
+            text-transform: uppercase;
+            font-weight: bold;
             height: 50px;
             width: 30%;
             color: $primary;
@@ -229,11 +238,8 @@ header {
         }
         button:hover{
             background-color: darken(#e8eeef, 10%);
+            color: $primary;
         }
-        // button:focus{
-        //     color: #e8eeef;
-        //     background-color: $primary;
-        // }
 
         p{
             color: $primary;
