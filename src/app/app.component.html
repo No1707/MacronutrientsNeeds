@@ -29,7 +29,7 @@
       <h3>Carbohydrates</h3>
       <p>These are a major source of energy for our bodies and are stored in our muscles and liver for later use.Foods
         that contain large amounts of carbohydrates include fruits, grains (rice, oats, barley, etc) and roots
-        (potatoes, yams, carrots, etc).</p>
+        (potatoes, yams, carrots, etc). <br> 1 gram of carbohydrate = 4 Calories</p>
     </div>
 
     <div class="inter"></div>
@@ -37,7 +37,7 @@
     <div class="defContainer proteins revealRight">
       <p>Our bodies use proteins to grow tissue and muscle, repair organs and to create hormones and enzymes; proteins
         are also used for energy when carbohydrates are unavailable. Foods that contain high levels of protein include
-        poultry, fish, beans, diary, nuts and legumes.</p>
+        poultry, fish, beans, diary, nuts and legumes. <br> 1 gram of protein = 4 Calories</p>
       <h3>Proteins</h3>
     </div>
 
@@ -47,8 +47,7 @@
       <h3>Fats</h3>
       <p>In order to absorb vitamins, our bodies need fats. Foods that contain a high percentage of fat include
         cooking oils, butter, nuts and cheese. Of the three macronutrients, fats contain the highest number of calories
-        per gram.
-      </p>
+        per gram. <br> 1 gram of fat = 9 Calories</p>
     </div>
 
     <div class="inter"></div>
@@ -86,6 +85,8 @@
 
   <section class="tdeeDetails">
 
+    <h2>Then, what is your <span>goal</span> ?</h2>
+
     <p><span>Maintaining</span> your current body weight, will require roughly the TDEE you calculated above. To
       <span>gain</span> weight, you should
       exceed your TDEE and to <span>lose</span> weight you should create a caloric deficit by consuming less than your
@@ -95,9 +96,9 @@
 
     <div *ngIf="calories > 0">
 
-      <button class="loseGain" value="lose" (click)="loseOrGain($event)">Lose</button>
+      <button class="loseGain" value="lose" (click)="loseOrGain($event)">Lose (-20%)</button>
       <p>{{ goal }}</p>
-      <button class="loseGain" value="gain" (click)="loseOrGain($event)">Gain</button>
+      <button class="loseGain" value="gain" (click)="loseOrGain($event)">Gain (+20%)</button>
 
     </div>
 

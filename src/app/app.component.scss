@@ -4,6 +4,10 @@
 
 $primary: rgb(111, 0, 255);
 
+span{
+    color: $primary;
+}
+
 /* hero - part 1 */
 header {
     width: 100%;
@@ -34,7 +38,6 @@ header {
             span{
                 font-weight: bold;
                 font-size: 110%;
-                color: $primary;
             }
         }
     }
@@ -157,10 +160,6 @@ header {
             h2{
                 font-size: 2em;
                 text-align: center;
-
-                span{
-                    color: $primary;
-                }
             }
 
             p:first-of-type{
@@ -169,7 +168,6 @@ header {
             p{
                 span{
                     font-weight: bold;
-                    color: $primary;
                 }
             }
         }
@@ -186,10 +184,6 @@ header {
             .result{
                 font-size: 2em;
                 text-align: center;
-
-                span{
-                    color: $primary;
-                }
             }
         }
     }
@@ -201,13 +195,21 @@ header {
     flex-direction: column;
     align-items: center;
 
+    h2{
+        font-size: 2em;
+        text-align: center;
+
+        span{
+            text-transform: uppercase;
+        }
+    }
+
     p{
         width: 70%;
         font-size: 1.5em;
 
         span{
             font-weight: bold;
-            color: $primary;
             text-transform: uppercase;
         }
     }
