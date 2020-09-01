@@ -117,13 +117,23 @@ header {
     transition: transform 1s cubic-bezier(0, 0, 0, 1), opacity 1s;
     will-change: transform, opacity;
 }
+.reveal{
+    transform: translateY(10vh);
+    opacity: 0;
+    transition: transform 1s cubic-bezier(0, 0, 0, 1), opacity 1s;
+    will-change: transform, opacity;
+}
 
 .revealRight.revealed{
-    transform: translateX(0vh);
+    transform: translateX(0);
     opacity: 1;
 }
 .revealLeft.revealed{
-    transform: translateX(0vh);
+    transform: translateX(0);
+    opacity: 1;
+}
+.reveal.revealed{
+    transform: translateY(0);
     opacity: 1;
 }
 

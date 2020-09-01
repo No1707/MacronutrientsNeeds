@@ -19,7 +19,7 @@ export class AppComponent {
   ngOnInit(): void {
 
     // Reveal
-    const revealElements = document.querySelectorAll(".revealRight, .revealLeft")
+    const revealElements = document.querySelectorAll(".revealRight, .revealLeft, .reveal")
     const revealItems = []
 
     for (let i = 0; i < revealElements.length; i++) {
