@@ -27,7 +27,7 @@
 
     <div class="defContainer carbohydrates revealLeft">
       <h3>Carbohydrates</h3>
-      <p>These are a major source of energy for our bodies and are stored in our muscles and liver for later use.Foods
+      <p>These are a major source of energy for our bodies and are stored in our muscles and liver for later use. Foods
         that contain large amounts of carbohydrates include fruits, grains (rice, oats, barley, etc) and roots
         (potatoes, yams, carrots, etc). <br> 1 gram of carbohydrate = 4 Calories</p>
     </div>
@@ -59,6 +59,7 @@
     <h1>Now, let's see what you need</h1>
 
     <div class="tdeeContainer">
+
       <div>
 
         <h2>First, we need to determine your <span>TDEE</span> <br>(Total Daily Energy Expenditure)</h2>
@@ -69,7 +70,9 @@
           with your fitness goals; knowing your caloric needs empowers you with the knowledge to employ a more practical
           and sustainable strategy to achieving your fitness goals.</p>
 
-        <p>This calculation uses the <a target="blank" href="https://sympa-sympa.com/creation-bien-etre/une-formule-simple-calcule-combien-de-calories-par-jour-tu-devrais-consommer-pour-perdre-du-poids-307360/"><span>Mifflin-St Jeor</span></a> formula, which is the most used and precise method.</p>
+        <p>This calculation uses the <a target="blank"
+            href="https://sympa-sympa.com/creation-bien-etre/une-formule-simple-calcule-combien-de-calories-par-jour-tu-devrais-consommer-pour-perdre-du-poids-307360/">
+            <span>Mifflin-St Jeor</span></a> formula, which is the most used and precise method.</p>
 
       </div>
 
@@ -88,17 +91,51 @@
     <h2>Then, what is your <span>goal</span> ?</h2>
 
     <p><span>Maintaining</span> your current body weight, will require roughly the TDEE you calculated above. To
-      <span>gain</span> weight, you should
-      exceed your TDEE and to <span>lose</span> weight you should create a caloric deficit by consuming less than your
-      TDEE. You can create a caloric deficit by increasing your physical activity or consuming less than you TDEE.
-      Please keep in mind that too large of a caloric deficit can lead to health issues or even compromise your
-      weight-loss.</p>
+      <span>gain</span> weight, you should exceed your TDEE and to <span>lose</span> weight you should create a caloric
+      deficit by consuming less than your TDEE. You can also create a caloric deficit by increasing your physical
+      activity. Please keep in mind that too large of a caloric deficit can lead to health issues or even compromise
+      your weight-loss.
+    </p>
 
-    <div *ngIf="calories > 0">
+    <div class="goalChoice" *ngIf="calories > 0">
 
-      <button class="loseGain" value="lose" (click)="loseOrGain($event)">Lose (-20%)</button>
-      <p>{{ goal }}</p>
-      <button class="loseGain" value="gain" (click)="loseOrGain($event)">Gain (+20%)</button>
+      <div>
+        <button class="loseGain" value="lose" (click)="loseOrGain($event)">Lose (-20%)</button>
+        <button class="loseGain" (click)="loseOrGain($event)">Maintain</button>
+        <button class="loseGain" value="gain" (click)="loseOrGain($event)">Gain (+20%)</button>
+      </div>
+
+      <p *ngIf="goal > 0">{{ goal }} calories/day</p>
+
+    </div>
+
+
+  </section>
+
+  <section class="macros reveal">
+
+    <div>
+      bonjour
+    </div>
+
+    <div class="macroDetails">
+
+      <h2>And now, the tricky part, the <span>macronutrients</span></h2>
+
+      <p>Even though tracking calories is easy (requiring you to manage just one number), some people choose to track
+        macros instead. For example, a person might manage a medical condition by watching their macro intake. Tracking
+        macronutrients is more complex because you need to set goals for three intake numbers
+        instead of just one. For people trying to reach fitness goals or lose weight, find these numbers can be helpful.
+      </p>
+
+      <p>It is important to include each macronutrient in your daily diet, unless your healthcare provider has advised
+        you otherwise. This will be easier if you build each meal around a combination of protein, carbs, and healthy
+        fats. That said, finding the exact balance of macros that's right for you can be tricky. <br>
+      </p>
+
+      <p>The large range of percentages recommended for each macronutrient leaves room for experimentation. Everyone's
+        body functions differently when various ratios are consumed.
+      </p>
 
     </div>
 

@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  // title = 'macrosNeeds';
+  title = 'macrosNeeds';
 
   calories: number
   goal
@@ -70,11 +70,14 @@ export class AppComponent {
     if(active){
       active.classList.remove("activeButton")
     }
-    if (tar.value === "lose"){
+    if(tar.value === "lose"){
       this.goal = (this.calories * 0.8).toFixed(1)
       tar.classList.add("activeButton")
-    } else {
+    } else if(tar.value === "gain"){
       this.goal = (this.calories * 1.2).toFixed(1)
+      tar.classList.add("activeButton")
+    } else {
+      this.goal = this.calories.toFixed(1)
       tar.classList.add("activeButton")
     }
   }
