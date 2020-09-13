@@ -101,11 +101,11 @@
 
       <div>
         <button class="loseGain" value="lose" (click)="loseOrGain($event)">Lose (-20%)</button>
-        <button class="loseGain" (click)="loseOrGain($event)">Maintain</button>
+        <button class="loseGain activeButton" value="maintain" (click)="loseOrGain($event)">Maintain</button>
         <button class="loseGain" value="gain" (click)="loseOrGain($event)">Gain (+20%)</button>
       </div>
 
-      <p *ngIf="goal > 0">{{ goal }} calories/day</p>
+      <p><span>{{ goal }}</span> calories/day</p>
 
     </div>
 
@@ -114,8 +114,28 @@
 
   <section class="macros reveal">
 
-    <div>
-      bonjour
+    <div class="macroProgress">
+
+      <div>
+        <h2>Carbohydrates</h2>
+        <mat-progress-bar mode="determinate" value="50"></mat-progress-bar>
+        <p>X calories from carbohdyrates</p>
+      </div>
+
+      <div>
+        <h2>Proteins</h2>
+        <mat-progress-bar mode="determinate" value="25"></mat-progress-bar>
+        <p>X calories from proteins</p>
+      </div>
+
+      <div>
+        <h2>Fats</h2>
+        <mat-progress-bar mode="determinate" value="25"></mat-progress-bar>
+        <p>X calories from fats</p>
+      </div>
+
+      <p>Here is a broad range for each of the macronutrients, with your goal took in consideration.</p>
+      
     </div>
 
     <div class="macroDetails">

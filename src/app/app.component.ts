@@ -14,6 +14,8 @@ export class AppComponent {
 
   caloriesNeed(event){
     this.calories = event
+
+    this.goal = event.toFixed(1)
   }
 
   ngOnInit(): void {

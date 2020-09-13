@@ -203,8 +203,10 @@ header {
 .tdeeDetails{
     width: 100%;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
+    padding: 100px 0 50px 0;
 
     h2{
         span{
@@ -265,8 +267,8 @@ header {
         }
 
         p{
-            color: $primary;
             text-align: center;
+            font-size: 1.7em;
         }
     }
 }
@@ -274,15 +276,39 @@ header {
 
 /* macros - part 5 */
 .macros{
+    height: 100%;
     display: flex;
     justify-content: center;
 
-    div{
+
+    // Left progress bar
+    .macroProgress{
         width: 50%;
-        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        p{
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+        div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+
+            mat-progress-bar{
+                width: 60%;
+            }
+        }
     }
 
+
+    // Right text
     .macroDetails{
+        width: 50%;
         display: flex;
         flex-direction: column;
         align-items: center;
