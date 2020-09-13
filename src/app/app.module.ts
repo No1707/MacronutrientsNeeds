@@ -7,8 +7,7 @@ import { AppComponent } from './app.component';
 import { TDEEComponent } from './tdee/tdee.component';
 //others
 import { ReactiveFormsModule } from '@angular/forms';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatProgressBarModule } from '@angular/material/progress-bar'
+import { FlexLayoutModule } from '@angular/flex-layout'
 
 @NgModule({
   declarations: [
@@ -19,8 +18,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar'
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule,
-    MatProgressBarModule
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

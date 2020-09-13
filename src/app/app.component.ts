@@ -12,9 +12,12 @@ export class AppComponent {
   calories: number
   goal
 
+  carbsRatio: number
+  protsRatio: number
+  fatsRatio: number
+
   caloriesNeed(event){
     this.calories = event
-
     this.goal = event.toFixed(1)
   }
 
@@ -65,7 +68,7 @@ export class AppComponent {
   // ngInit end
 
   
-
+  // tdee + goal
   loseOrGain(event){
     const active = document.querySelector(".activeButton")
     const tar = event.target
@@ -75,13 +78,30 @@ export class AppComponent {
     if(tar.value === "lose"){
       this.goal = (this.calories * 0.8).toFixed(1)
       tar.classList.add("activeButton")
+      this.carbsRatio = 35
+      this.protsRatio = 45
+      this.fatsRatio = 20
     } else if(tar.value === "gain"){
       this.goal = (this.calories * 1.2).toFixed(1)
       tar.classList.add("activeButton")
+      this.carbsRatio = 45
+      this.protsRatio = 35
+      this.fatsRatio = 20
     } else {
       this.goal = this.calories.toFixed(1)
       tar.classList.add("activeButton")
+      this.carbsRatio = 50
+      this.protsRatio = 20
+      this.fatsRatio = 30
     }
+    
+  }
+
+  test(){
+    const init = this.carbsRatio
+
+    this.carbsRatio = this.protsRatio
+    this.protsRatio = init
   }
 
 }

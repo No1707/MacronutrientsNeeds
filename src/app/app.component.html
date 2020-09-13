@@ -62,7 +62,8 @@
 
       <div>
 
-        <h2>First, we need to determine your <span>TDEE</span> <br>(Total Daily Energy Expenditure)</h2>
+        <h2>First, we need to determine your <span>TDEE</span> <br>(<span>T</span>otal <span>D</span>aily
+          <span>E</span>nergy <span>E</span>xpenditure)</h2>
 
         <p>Your total daily energy expenditure is an estimation of how many calories you burn per day when exercise is
           taken into account. <br><br> Determining your caloric budget (the number of calories you can consume)
@@ -72,7 +73,7 @@
 
         <p>This calculation uses the <a target="blank"
             href="https://sympa-sympa.com/creation-bien-etre/une-formule-simple-calcule-combien-de-calories-par-jour-tu-devrais-consommer-pour-perdre-du-poids-307360/">
-            <span>Mifflin-St Jeor</span></a> formula, which is the most used and precise method.</p>
+            <span>Mifflin-St Jeor</span></a> formula, which is the most used method to calculate TDEE.</p>
 
       </div>
 
@@ -116,26 +117,30 @@
 
     <div class="macroProgress">
 
-      <div>
-        <h2>Carbohydrates</h2>
-        <mat-progress-bar mode="determinate" value="50"></mat-progress-bar>
-        <p>X calories from carbohdyrates</p>
+      <div class="progressBack" fxLayout="row">
+        <div class="bar carbsBar" fxFlex="{{carbsRatio}}" [attr.carbsP]="carbsRatio"></div>
+        <div class="bar protsBar" fxFlex="{{protsRatio}}" [attr.protsP]="protsRatio"></div>
+        <div class="bar fatsBar" fxFlex="{{fatsRatio}}" [attr.fatsP]="fatsRatio"></div>
       </div>
 
-      <div>
-        <h2>Proteins</h2>
-        <mat-progress-bar mode="determinate" value="25"></mat-progress-bar>
-        <p>X calories from proteins</p>
+      <div style="width: 90%" *ngIf="carbsRatio > 0">
+
+        <p><strong>Carbohydrates:</strong> you need to consume <span>{{(goal * (carbsRatio / 100)).toFixed(1)}}</span>
+          calories from carbohydrates everyday, which is <span>{{((goal * (carbsRatio / 100)) / 4).toFixed(1)}}g</span>.
+        </p>
+
+        <p><strong>Proteins:</strong> you need to consume <span>{{(goal * (protsRatio / 100)).toFixed(1)}}</span>
+          calories from proteins everyday, which is <span>{{((goal * (protsRatio / 100)) / 4).toFixed(1)}}g</span>.
+        </p>
+
+        <p><strong>Fats:</strong> you need to consume <span>{{(goal * (fatsRatio / 100)).toFixed(1)}}</span>
+          calories from fats everyday, which is <span>{{((goal * (fatsRatio / 100)) / 9).toFixed(1)}}g</span>.
+        </p>
+        <br>
+        <p>Here is a broad range for each of the macronutrients, with your goal took in consideration.</p>
+
       </div>
 
-      <div>
-        <h2>Fats</h2>
-        <mat-progress-bar mode="determinate" value="25"></mat-progress-bar>
-        <p>X calories from fats</p>
-      </div>
-
-      <p>Here is a broad range for each of the macronutrients, with your goal took in consideration.</p>
-      
     </div>
 
     <div class="macroDetails">
@@ -162,6 +167,28 @@
   </section>
 
 </main>
+
+<footer>
+  <h1>Warning</h1>
+
+  <div>
+    <p>This site has not been written by professionnals, only by a junior web developer to train Angular.
+      I inquired informations and operations on different nutrition sites, so if you need a very <strong>broad</strong>
+      range and knowledge about macronutrients,
+      this site is still relevant. <br> <span>But not if you need real advices about nutrition and weight management !</span>
+    </p>
+    <p>
+      Websites i refered to: <br>
+      <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2853497/">ISSN exercise & sport nutrition review</a><br>
+      <a href="https://www.verywellfit.com/macronutrients-2242006">verywellfit.com</a><br>
+      <a href="https://mealpreponfleek.com/macro-calculator/">mealpreponfleek.com</a><br>
+      <a href="https://www.acefitness.org/education-and-resources/professional/expert-articles/5904/how-to-determine-the-best-macronutrient-ratio-for-your-goals/">
+        Acefitness.org
+      </a>
+    </p>
+  </div>
+
+</footer>
 
 <div class="container">
   <router-outlet></router-outlet>

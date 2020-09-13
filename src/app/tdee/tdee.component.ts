@@ -36,7 +36,7 @@ export class TDEEComponent {
 
   onSubmit(){
     const { Gender, Age, Height, Weight, Activity } = this.TDEEForm.value
-
+    
     if( Gender === "man"){
       this.result = Math.round((10 * Weight + 6.25 * Height - 5 * Age + 5) * Activity)
       this.change.emit(this.result)
