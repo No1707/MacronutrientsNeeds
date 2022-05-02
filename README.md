@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.2.
 
+I made this website to help you determine the calories you need to eat per day, depending on your objectiv. 
+Wether you need to gain weight, loose weight or just maintain your current one, it will tell you how many calories you need taking in count your sex, height, weight, physical activity and objectiv. 
+I used this project to train myself to Angular JS.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
