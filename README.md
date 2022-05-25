@@ -6,6 +6,8 @@ I made this website to help you determine the calories you need to eat per day, 
 Wether you need to gain weight, loose weight or just maintain your current one, it will tell you how many calories you need taking in count your sex, height, weight, physical activity and objectiv. 
 I used this project to train myself to Angular JS.
 
+I still need to finish some things though, like the responsiveness ><" ..
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
